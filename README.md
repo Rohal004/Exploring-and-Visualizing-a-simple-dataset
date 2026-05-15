@@ -2,6 +2,12 @@
 
 This project demonstrates how to load, inspect, summarize, and visualize the Iris dataset using `pandas`, `matplotlib`, and `seaborn`.
 
+## Setup
+
+```bash
+python -m pip install -r requirements.txt
+```
+
 ## Run
 
 ```bash
