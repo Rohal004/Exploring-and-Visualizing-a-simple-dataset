@@ -9,7 +9,10 @@ IRIS_CSV_URL = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/ir
 
 
 def main() -> None:
-    dataset = pd.read_csv(IRIS_CSV_URL)
+    try:
+        dataset = pd.read_csv(IRIS_CSV_URL)
+    except Exception as error:
+        raise SystemExit(f"Failed to load Iris CSV data from {IRIS_CSV_URL}: {error}") from error
 
     print("Dataset shape:", dataset.shape)
     print("Dataset columns:", list(dataset.columns))
