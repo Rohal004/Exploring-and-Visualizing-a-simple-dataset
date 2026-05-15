@@ -8,6 +8,7 @@ import seaborn as sns
 BASE_DIR = Path(__file__).resolve().parent
 DATASET_PATH = BASE_DIR / "data" / "simple_dataset.csv"
 PLOTS_DIR = BASE_DIR / "plots"
+HISTOGRAM_BINS = 8
 
 
 def main() -> None:
@@ -35,7 +36,7 @@ def main() -> None:
     plt.close()
 
     plt.figure(figsize=(8, 5))
-    sns.histplot(data=df, x="SepalLengthCm", kde=True, bins=8)
+    sns.histplot(data=df, x="SepalLengthCm", kde=True, bins=HISTOGRAM_BINS)
     plt.title("Histogram: Sepal Length Distribution")
     plt.tight_layout()
     plt.savefig(PLOTS_DIR / "histogram.png")
