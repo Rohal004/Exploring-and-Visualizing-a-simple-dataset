@@ -8,5 +8,4 @@ __pycache__/
 .ipynb_checkpoints/
 .vscode/
 .idea/
-.DS_Store__pycache__/
-plots/
+.DS_Store
